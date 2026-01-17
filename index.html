@@ -86,6 +86,34 @@
             line-height: 1.8;
         }
         
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff0080, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: #999;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
         .section {
             background: rgba(20, 20, 20, 0.6);
             backdrop-filter: blur(20px);
@@ -181,11 +209,36 @@
             z-index: 1;
         }
         
+        .category-section {
+            margin-bottom: 60px;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .category-title {
+            font-size: 2em;
+            color: #00ffff;
+            font-weight: 700;
+        }
+        
+        .category-count {
+            background: rgba(0, 255, 255, 0.2);
+            color: #00ffff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 35px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
         
         .project-card {
@@ -194,6 +247,7 @@
             overflow: hidden;
             border: 2px solid rgba(255, 255, 255, 0.1);
             transition: all 0.4s ease;
+            cursor: pointer;
         }
         
         .project-card:hover {
@@ -203,13 +257,14 @@
         }
         
         .project-placeholder {
-            height: 250px;
+            height: 280px;
             background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             color: #666;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 700;
             position: relative;
             overflow: hidden;
@@ -229,19 +284,25 @@
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
         
+        .project-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
         .project-info {
             padding: 25px;
         }
         
         .project-info h3 {
-            color: #00ffff;
-            margin-bottom: 12px;
-            font-size: 1.4em;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-size: 1.3em;
         }
         
         .project-info p {
             color: #aaaaaa;
             line-height: 1.6;
+            font-size: 0.95em;
         }
         
         .contact {
@@ -328,6 +389,10 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .stat-number {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
@@ -341,6 +406,20 @@
                 Specializing in Adobe Creative Suite with hands-on experience in Photoshop and Illustrator.
                 Creating stunning visuals and bringing creative ideas to life through digital artistry.
             </p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Adobe Tools</div>
+                </div>
+            </div>
         </header>
         
         <section class="section">
@@ -368,36 +447,228 @@
         </section>
         
         <section class="section">
-            <h2>🎬 Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-placeholder">
-                        Photoshop Project
-                    </div>
-                    <div class="project-info">
-                        <h3>Photo Manipulation</h3>
-                        <p>Showcase your Photoshop work - composites, retouching, digital art, or creative photo edits.</p>
-                    </div>
+            <h2>🎬 Portfolio</h2>
+            
+            <!-- Social Media Posts -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">📱 Social Media Posts</h3>
+                    <span class="category-count">6-7 Designs</span>
                 </div>
-                <div class="project-card">
-                    <div class="project-placeholder">
-                        Illustrator Project
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">📱</div>
+                            Post Design 1
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media Post</h3>
+                            <p>Instagram/Facebook post design with engaging visuals</p>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Vector Artwork</h3>
-                        <p>Display your Illustrator creations - logos, illustrations, icons, or graphic designs.</p>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">📱</div>
+                            Post Design 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media Post</h3>
+                            <p>Creative social media content design</p>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-placeholder">
-                        Mixed Media
-                    </div>
-                    <div class="project-info">
-                        <h3>Combined Projects</h3>
-                        <p>Projects using both Photoshop and Illustrator together for complete visual solutions.</p>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">📱</div>
+                            Post Design 3
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media Post</h3>
+                            <p>Eye-catching promotional post design</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Banners -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">🎯 Banners</h3>
+                    <span class="category-count">2 Designs</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🎯</div>
+                            Banner Design 1
+                        </div>
+                        <div class="project-info">
+                            <h3>Web Banner</h3>
+                            <p>Professional banner design for web/print</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🎯</div>
+                            Banner Design 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Promotional Banner</h3>
+                            <p>Marketing banner with bold visuals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thumbnails -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">🖼️ Thumbnails</h3>
+                    <span class="category-count">2 Designs</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🖼️</div>
+                            Thumbnail 1
+                        </div>
+                        <div class="project-info">
+                            <h3>YouTube Thumbnail</h3>
+                            <p>Attention-grabbing video thumbnail design</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🖼️</div>
+                            Thumbnail 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Content Thumbnail</h3>
+                            <p>Engaging thumbnail for digital content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brochures -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">📄 Brochures</h3>
+                    <span class="category-count">2 Designs</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">📄</div>
+                            Brochure 1
+                        </div>
+                        <div class="project-info">
+                            <h3>Business Brochure</h3>
+                            <p>Professional multi-page brochure design</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">📄</div>
+                            Brochure 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Marketing Brochure</h3>
+                            <p>Creative brochure layout and design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Movie Posters -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">🎬 Movie Posters</h3>
+                    <span class="category-count">2-3 Designs</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🎬</div>
+                            Movie Poster 1
+                        </div>
+                        <div class="project-info">
+                            <h3>Cinematic Poster</h3>
+                            <p>Dramatic movie poster with visual effects</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🎬</div>
+                            Movie Poster 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Film Poster Design</h3>
+                            <p>Creative poster composition and typography</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Character Design -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">👤 Character Design</h3>
+                    <span class="category-count">2-3 Designs</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">👤</div>
+                            Character 1
+                        </div>
+                        <div class="project-info">
+                            <h3>Character Illustration</h3>
+                            <p>Original character design in Illustrator</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">👤</div>
+                            Character 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Vector Character</h3>
+                            <p>Stylized character artwork and design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scenery Design -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3 class="category-title">🌄 Scenery Design</h3>
+                    <span class="category-count">1-2 Designs</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🌄</div>
+                            Scenery 1
+                        </div>
+                        <div class="project-info">
+                            <h3>Landscape Illustration</h3>
+                            <p>Beautiful scenery and environment design</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-placeholder">
+                            <div class="project-icon">🌄</div>
+                            Scenery 2
+                        </div>
+                        <div class="project-info">
+                            <h3>Environment Art</h3>
+                            <p>Digital landscape and background design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
         
         <section class="section contact">
